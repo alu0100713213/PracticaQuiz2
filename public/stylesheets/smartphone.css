@@ -1,0 +1,19 @@
+body { 
+	background-image: url("../images/fondo_responsive.jpg");
+	background-repeat: no-repeat;
+}
+
+#page-wrap:after{ 
+	content: "Smartphone Layout" ; 
+	font-size: 16px;
+}
+h2 span, section h3 { 
+	display: none; 
+}
+body { 
+	font-size: x-large; 
+
+}
+footer, input { 
+font-size: 16px; 
+}

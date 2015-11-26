@@ -1,0 +1,13 @@
+body {
+  background-image: url("../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
