@@ -9,29 +9,20 @@ function Respuesta(x){
   }
 
   else if(x instanceof Array){
-	var salida=0;
-	return function(z){
-	if(z.length==x.length)
-	{
-	    var tam=x.length
-	    for(var i=0;i<tam;i++)
-	    {
-	      for(var j=0; j<tam;j++){
-	          if (z[i]==x[j]) {
-	            salida++;
-    		  }
+	f = function(res){
+	      if(respuesta.length == res.length)
+		{ 
+		var correcta = 0;
+		for(var i = 0; i < res.length; i++){
+		  if(res[i] === res[i])
+		    correcta++;
+		}
+		if(correcta == respuesta.length)
+		  return true;
+		return false;
 	      }
-	    }
-	    if (salida==tam){
-	      respues=0;
-	      return true;
-	    }
-	    else 
 	      return false;
-	}
-	else 
-	  return false;
-	}
+	    };
   }
 
   else {
