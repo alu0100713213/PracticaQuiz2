@@ -1,5 +1,5 @@
 function Pregunta(args){
-	this.args = args;
+  this.args = args;
 }
 
 module.exports = Pregunta;
