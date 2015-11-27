@@ -8,14 +8,10 @@ var PreguntaSimple = require('../models/tipos_preguntas.js');
 function Quiz() {
   AbstractQuiz.call(this);
   this.q.push(
-    
-    { pregunta: new PreguntaCorta('¿Capital de Italia?'),
-      respuesta: new Respuesta(/^\s*roma\s*$/i)
-    },
-
+ 
     {
-      pregunta: new PreguntaSimple('¿Cuantas veces revivió Goku?', ['1','4','Más que Krilin','3']),
-      respuesta: new Respuesta('3')
+	pregunta: new PreguntaSimple('¿Capital de Italia?',['Madrid','Roma','Italia']),
+	respuesta: new Respuesta(/^\s*roma\s*$/i)
     },
     { 
       pregunta: new PreguntaMultiple('¿Qué animales son mamíferos?', ['Ornitorrinco', 'Canguro', 'Ballena', 'Gato']),
