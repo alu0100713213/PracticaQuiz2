@@ -2,7 +2,7 @@ var Respuesta = require('../models/respuesta_model.js');
 var PreguntaCorta = require('../models/pregunta_corta.js');
 var PreguntaLarga = require('../models/pregunta_larga.js');
 var AbstractQuiz = require('../models/abstract_quiz_model.js');
-var PreguntaMultiple = require('../models/tipos_preguntas.js');
+var PreguntaMultiple = require('../models/p_multiple.js');
 var PreguntaSimple = require('../models/tipos_preguntas.js');
 
 function Quiz() {
@@ -15,7 +15,7 @@ function Quiz() {
 
     {
       pregunta: new PreguntaSimple('¿Cuantas veces revivió Goku?', ['1','4','Más que Krilin','3']),
-      respuesta: new Respuesta([1,4,'Más que Krilin', 3])
+      respuesta: new Respuesta('3')
     },
     { 
       pregunta: new PreguntaMultiple('¿Qué animales son mamíferos?', ['Ornitorrinco', 'Canguro', 'Ballena', 'Gato']),

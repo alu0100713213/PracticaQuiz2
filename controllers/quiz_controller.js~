@@ -17,7 +17,6 @@ exports.answer = function(req, res) {
   res.render('quizes/answer', {respuesta: c});
 };
 
-
 exports.questions = function(req, res){
   var nQ = quiz.nQuestions();
   var salida = new Array(nQ);

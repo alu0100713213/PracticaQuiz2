@@ -15,7 +15,7 @@ function Quiz() {
 
     {
       pregunta: new PreguntaSimple('¿Cuantas veces revivió Goku?', ['1','4','Más que Krilin','3']),
-      respuesta: new Respuesta([1,4,'Más que Krilin', 3])
+      respuesta: new Respuesta('3')
     },
     { 
       pregunta: new PreguntaMultiple('¿Qué animales son mamíferos?', ['Ornitorrinco', 'Canguro', 'Ballena', 'Gato']),

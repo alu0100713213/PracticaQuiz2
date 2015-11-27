@@ -6,7 +6,7 @@ exports.question = function(req,res) {
   current = quiz.randomQuestion();
   res.render('quizes/question', {pregunta: current.pregunta});
 };
-
+		
 exports.home = function(req, res){
   res.render('index', {title: 'Quiz'});
 };
