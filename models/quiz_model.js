@@ -2,7 +2,7 @@ var Respuesta = require('../models/respuesta_model.js');
 var PreguntaCorta = require('../models/pregunta_corta.js');
 var PreguntaLarga = require('../models/pregunta_larga.js');
 var AbstractQuiz = require('../models/abstract_quiz_model.js');
-var PreguntaMultiple = require('../models/tipos_preguntas.js');
+var PreguntaMultiple = require('../models/p_multiple.js');
 var PreguntaSimple = require('../models/tipos_preguntas.js');
 
 function Quiz() {

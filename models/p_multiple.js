@@ -1,11 +1,11 @@
 var Pregunta = require('../models/pregunta_model.js');
 
-function PreguntaSimple(args, array_respuestas){
+function PreguntaMultiple(args, array_respuestas) {
 	Pregunta.call(this, args);
 	this.args = args;
 	this.arrayrespuestas = array_respuestas;
 	var numero;
-	this.view = "<select>"; 
+	this.view = "<select name='respuestamultiple' size=" + this.arrayrespuestas.length + " multiple>"; 
 	for(var i=0; i<array_respuestas.length; i++){
 		this.view += "<option value='"+ this.arrayrespuestas[i] + "'>" + this.arrayrespuestas[i] + "</option>";
 
@@ -14,8 +14,8 @@ function PreguntaSimple(args, array_respuestas){
 
 }
 
-PreguntaSimple.prototype = new Pregunta();
-PreguntaSimple.prototype.constructor = PreguntaSimple;
-module.exports = PreguntaSimple;
+PreguntaMultiple.prototype = new Pregunta();
+PreguntaMultiple.prototype.constructor = PreguntaMultiple;
+module.exports = PreguntaMultiple;
 
 

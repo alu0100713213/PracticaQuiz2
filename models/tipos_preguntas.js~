@@ -23,10 +23,10 @@ function PreguntaMultiple(args, array_respuestas) {
 }
 
 PreguntaMultiple.prototype = new Pregunta();
-PreguntaSimple.prototype = new Pregunta();
-
 PreguntaMultiple.prototype.constructor = PreguntaMultiple;
+
 PreguntaSimple.prototype = new Pregunta();
+PreguntaSimple.prototype.constructor = PreguntaSimple;
 
 module.exports = PreguntaMultiple;
 module.exports = PreguntaSimple;
