@@ -1,35 +1,26 @@
-function Respuesta(input){
-	this.input = input;
-  if(typeof(this.input)==='string' || typeof(this.input)==='number'){
-    return function(end){return end === this.input;};
+function Respuesta(x){
+  if(typeof(x)==='string' || typeof(x)==='number'){
+    return function(res){return res === x;};
   }
-
-  else if(this.input instanceof RegExp){
-    return function(end){return end.match(this.input);};
+  else if(x instanceof RegExp){
+    return function(res){return res.match(x);};
   }
+  else if(x instanceof Array){
+    return function(res){
+      if(x.length != res.length) return false;
 
- else if(this.input instanceof Array){
-	return function(end){
-		return end.match(this.input);
-	};
+      var input = true;
 
-/**    return function(end){
-      if(this.input.length != end.length) return false;
-
-      var resultado = true;
-
-      for(var i=0; i<input.length; i++){
-        if(input[i] != end[i]) resultado = false;
+      for(var i=0; i<x.length; i++){
+        if(x[i] != res[i]) input = false;
       }
 
-      return resultado;
+      return input;
     };
   }
-
   else {
-    return input;
-  }*/
-}
+    return x;
+  }	
 }
 
 module.exports = Respuesta;
