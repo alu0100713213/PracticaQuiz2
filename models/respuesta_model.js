@@ -9,21 +9,17 @@ function Respuesta(x){
   }
 
   else if(x instanceof Array){
-    f = function(res){
-      if(respuesta.length == res.length){ 
-        var correcta = 0;
-        for(var i = 0; i < respuesta.length; i++){
-          if(res[i] === respuesta[i])
-            correcta++;
-        }
-        if(correcta == respuesta.length)
-          return true;
-	else       
-	 return false;
-      }
-      return true;
+	return function(res){
+	      if(x.length != res.length) return false;
+
+	      var option = true;
+
+	      for(var i=0; i<x.length; i++){
+		if(x[i] != res[i]) option = false;
+	      }
+	      return option;
+	    };
   }
-}
 
   else {
     return x;
